@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	import type {Entry} from "contentful";
+	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 	import { getPageBySlug } from '../api/contentful';
 	export const load = async () => {
@@ -17,11 +17,8 @@
 	export let page: Entry<PageFields>;
 </script>
 
-
-<h1>{page.fields.title}</h1>
-
 {#if page.fields.components}
 	{#each page.fields.components as component}
-		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} />
+		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} {page} />
 	{/each}
 {/if}

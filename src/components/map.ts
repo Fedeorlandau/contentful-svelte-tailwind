@@ -1,9 +1,9 @@
-import Banner from './Banner/Banner.svelte';
+import Hero from './Hero/Hero.svelte';
 
 export interface MapProps {
     [key: string]: unknown
 }
 
 export const Map: MapProps = {
-    'hero': Banner,
+    'hero': Hero,
 }
