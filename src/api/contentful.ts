@@ -1,20 +1,29 @@
-import { createClient } from 'contentful';
 import type { PageFields } from 'src/types';
-import type { Entry } from 'contentful';
+import type { Entry, EntryCollection } from 'contentful';
+import axios, { AxiosRequestConfig } from 'axios';
 
-const client = createClient({
-  // This is the space ID. A space is like a project folder in Contentful terms
-  space: import.meta.env.VITE_CONTENTFUL_SPACE_ID as string,
-  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-  accessToken: import.meta.env.VITE_CONTENTFUL_TOKEN as string
-});
+const api = axios.create({
+  baseURL: 'https://cdn.contentful.com'
+})
+
+const spaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
+const accessToken = import.meta.env.VITE_CONTENTFUL_TOKEN;
+
+const getEntries = <T>(config: AxiosRequestConfig) => {
+  return api.get<EntryCollection<T>>(`/spaces/${spaceId}/environments/master/entries?access_token=${accessToken}`, config)
+}
 
 export const getPageBySlug = async (slug: string)
     : Promise<Entry<PageFields>> => {
-    const entries = await client.getEntries<PageFields>({
+    const entries = await getEntries<PageFields>({
+      params: {
         'content_type': 'page',
-        'fields.slug': slug
+        'fields.slug': slug,
+        'include': '10'
+      }
     })
 
-    return entries.items[0];
+    const entry = entries.data.items[0];
+    entry.fields.components = entries.data.includes.Entry
+    return entry;
 };
