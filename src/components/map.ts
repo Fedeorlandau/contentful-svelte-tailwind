@@ -5,5 +5,5 @@ export interface MapProps {
 }
 
 export const Map: MapProps = {
-    'banner': Banner,
+    'hero': Banner,
 }
