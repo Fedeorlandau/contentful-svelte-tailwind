@@ -7,16 +7,16 @@
 				<h3 class="tracking-wide uppercase text-gray-500 font-bold">Product</h3>
 				<ul class="space-y-1 ">
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Features</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Features</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Integrations</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Integrations</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Pricing</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Pricing</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">FAQ</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">FAQ</a>
 					</li>
 				</ul>
 			</div>
@@ -24,10 +24,10 @@
 				<h3 class="tracking-wide uppercase text-gray-500 font-bold">Company</h3>
 				<ul class="space-y-1">
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Privacy</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Privacy</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Terms of Service</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Terms of Service</a>
 					</li>
 				</ul>
 			</div>
@@ -35,20 +35,20 @@
 				<h3 class="uppercase text-gray-500 font-bold">Developers</h3>
 				<ul class="space-y-1">
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Public API</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Public API</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Documentation</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Documentation</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-900">Guides</a>
+						<a href="/" class="text-gray-500 hover:text-gray-900">Guides</a>
 					</li>
 				</ul>
 			</div>
 			<div class="space-y-3">
 				<div class="uppercase text-gray-500 font-bold">Social media</div>
 				<div class="flex justify-start space-x-3">
-					<a href="#" title="Facebook" class="flex items-center p-1">
+					<a href="/" title="Facebook" class="flex items-center p-1">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -60,7 +60,7 @@
 							/>
 						</svg>
 					</a>
-					<a href="#" title="Twitter" class="flex items-center p-1">
+					<a href="/" title="Twitter" class="flex items-center p-1">
 						<svg
 							viewBox="0 0 24 24"
 							xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@
 							/>
 						</svg>
 					</a>
-					<a href="#" title="Instagram" class="flex items-center p-1">
+					<a href="/" title="Instagram" class="flex items-center p-1">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 32 32"
