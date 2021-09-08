@@ -2,11 +2,15 @@
 	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 	import { getPageBySlug } from '../api/contentful';
+	import axios from 'axios';
+
 	export const load = async () => {
 		const page = await getPageBySlug(`/`);
+		const res = await axios.post('http://localhost:3000/qry/page', { slug: '/'});
 		return {
 			props: {
-				page
+				page,
+				graphQlPage: res.data
 			}
 		};
 	};
@@ -15,7 +19,10 @@
 <script lang="ts">
 	import { Map } from '../components/map';
 	export let page: Entry<PageFields>;
+	export let graphQlPage: Response;
 </script>
+
+{JSON.stringify(graphQlPage)}
 
 {#if page.fields.components}
 	{#each page.fields.components as component}

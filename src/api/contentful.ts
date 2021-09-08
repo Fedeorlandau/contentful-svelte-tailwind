@@ -1,6 +1,7 @@
 import type { PageFields } from 'src/types';
 import type { Entry, EntryCollection } from 'contentful';
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
+import type { AxiosRequestConfig } from 'axios'
 
 const api = axios.create({
   baseURL: 'https://cdn.contentful.com'
