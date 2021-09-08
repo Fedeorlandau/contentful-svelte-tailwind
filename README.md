@@ -2,6 +2,8 @@
 
 Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/), deployed to [Vercel](https://vercel.com).
 
+![web](static/web.png)
+
 _Live Example: https://contentful-svelte-tailwind.vercel.app/_
 
 _Live Example: https://contentful-svelte-tailwind.vercel.app/test_
