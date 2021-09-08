@@ -10,7 +10,7 @@ _Live Example: https://contentful-svelte-tailwind.vercel.app/test_
 
 ### Env variables
 
-Remember to set up a `.env` file with your conentstack keys
+Remember to set up a `.env` file with your contentful keys
 
 ```env
 VITE_CONTENTFUL_SPACE_ID=""
