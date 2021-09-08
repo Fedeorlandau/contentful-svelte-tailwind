@@ -17,6 +17,7 @@ Remember to set up a `.env` file with your contentful keys
 ```env
 VITE_CONTENTFUL_SPACE_ID=""
 VITE_CONTENTFUL_TOKEN=""
+VITE_BASE_URL="http://localhost:3000"
 ```
 
 Once you've created a project and installed dependencies with `npm install`, start a development server:
