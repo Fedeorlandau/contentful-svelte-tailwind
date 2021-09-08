@@ -269,8 +269,8 @@
 					</div>
 				</Hoverable>
 
-				<a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
-				<a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900"> Docs </a>
+				<a href="/test" class="text-base font-medium text-gray-500 hover:text-gray-900"> Test </a>
+				<a href="/test" class="text-base font-medium text-gray-500 hover:text-gray-900"> Docs </a>
 
 				<Hoverable let:hovering>
 					<div class="relative">

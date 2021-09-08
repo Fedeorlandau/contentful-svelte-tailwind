@@ -7,7 +7,7 @@
 	export const load = async ({ page }: LoadInput) => {
 		return {
 			props: {
-				page: await getPageBySlug(`/${page.params.slug}`)
+				page: await getPageBySlug(`${page.params.slug}`)
 			}
 		};
 	};
@@ -16,10 +16,11 @@
 <script lang="ts">
 	import { Map } from '../components/map';
 	export let page: Entry<PageFields>;
+	console.log(page);
 </script>
 
 {#if page.fields.components}
 	{#each page.fields.components as component}
-		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} />
+		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} {page} />
 	{/each}
 {/if}
