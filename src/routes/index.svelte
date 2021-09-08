@@ -1,12 +1,12 @@
 <script context="module" lang="ts">
+	import local from '../api/local';
 	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 	import { getPageBySlug } from '../api/contentful';
-	import axios from 'axios';
 
 	export const load = async () => {
 		const page = await getPageBySlug(`/`);
-		const res = await axios.post('http://localhost:3000/qry/page', { slug: '/'});
+		const res = await local.post('/qry/page', { slug: '/'});
 		return {
 			props: {
 				page,

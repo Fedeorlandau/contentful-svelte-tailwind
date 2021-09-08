@@ -3,10 +3,10 @@
 	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 	import { getPageBySlug } from '../api/contentful';
-	import axios from 'axios';
+	import local from '../api/local';
 
 	export const load = async ({ page }: LoadInput) => {
-		const res = await axios.post('http://localhost:3000/qry/page', { slug: page.params.slug});
+		const res = await local.post('/qry/page', { slug: page.params.slug});
 		return {
 			props: {
 				page: await getPageBySlug(`${page.params.slug}`),
