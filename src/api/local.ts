@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const local = import.meta.env.DEV ? axios.create({
-    baseURL: 'http://localhost:3000'
-}) : axios
+const local = axios.create({
+    baseURL: import.meta.env.DEV ? 'http://localhost:3000' : import.meta.env.BASE_URL as string
+})
 
 export default local;
