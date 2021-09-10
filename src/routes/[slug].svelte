@@ -3,14 +3,17 @@
 	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 	import { getPageBySlug } from '../api/contentful';
-	import local from '../api/local';
+	import { client } from '../api/graphql';
+	import { GET_PAGES } from '../graphql/queries'
 
 	export const load = async ({ page }: LoadInput) => {
-		const res = await local.post('/qry/page', { slug: page.params.slug});
+		const { slug } = page.params;
+		const res = await client.query(GET_PAGES, { slug }).toPromise();
+
 		return {
 			props: {
-				page: await getPageBySlug(`${page.params.slug}`),
-				graphQlPage: res.data
+				page: await getPageBySlug(slug),
+				graphQlPage: res.data.pageCollection.items[0]
 			}
 		};
 	};

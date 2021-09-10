@@ -1,16 +1,18 @@
 <script context="module" lang="ts">
-	import local from '../api/local';
 	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 	import { getPageBySlug } from '../api/contentful';
+	import { client } from '../api/graphql';
+	import {GET_PAGES} from '../graphql/queries'
 
 	export const load = async () => {
 		const page = await getPageBySlug(`/`);
-		const res = await local.post('/qry/page', { slug: '/'});
+		const res = await client.query(GET_PAGES, { slug: '/' }).toPromise();
+		console.log(res)
 		return {
 			props: {
 				page,
-				graphQlPage: res.data
+				graphQlPage: res.data.pageCollection.items[0]
 			}
 		};
 	};

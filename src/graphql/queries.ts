@@ -1,8 +1,8 @@
-import { gql } from '@apollo/client/core/core.cjs.js';
+import { gql } from '@urql/core';
 
-export const GET_PAGES = (slug: string) => gql`
-     query {
-        pageCollection(where: { slug: "${slug}" }) {
+export const GET_PAGES = gql`
+     query getPages($slug: String!){
+        pageCollection(where: { slug: $slug }) {
           items {
             title,
             slug
@@ -10,5 +10,3 @@ export const GET_PAGES = (slug: string) => gql`
         }
       }
     `
-
-
