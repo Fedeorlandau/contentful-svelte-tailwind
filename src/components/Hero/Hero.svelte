@@ -32,7 +32,7 @@
 		</div>
 		<img
 			class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0"
-			src="https://i.ibb.co/9GMTkW3/desktop.png"
+			src="/desktop.webp"
 			alt="sample page"
 			role="img"
 		/>
