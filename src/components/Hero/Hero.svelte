@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageFields } from 'src/types';
-	import HeroImage from '$static/desktop.webp?webp&meta'
+	import HeroImage from '$static/desktop.png?width=400;700;900&format=webp&meta&srcset'
 
 	export let title: string;
 	export let description: string;
@@ -32,7 +32,7 @@
 		</div>
 		<img
 			class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0"
-			src={HeroImage}
+			srcset={HeroImage}
 			type="image/webp"
 			alt="sample page"
 			role="img"

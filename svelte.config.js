@@ -1,6 +1,6 @@
 import vercel from '@sveltejs/adapter-vercel';
 import preprocess from 'svelte-preprocess';
-import imagetools from 'vite-imagetools';
+import { imagetools } from "vite-imagetools"
 import path from 'path';
 
 console.log( path.resolve('src/static'))
@@ -15,7 +15,7 @@ export default {
 				  '$static': path.resolve('src/static/')
 				}
 			  },
-			plugins: [imagetools],
+			plugins: [imagetools({force: true})],
 			
 		}
 	}
