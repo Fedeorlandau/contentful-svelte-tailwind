@@ -8,7 +8,7 @@
 	export const load = async () => {
 		const page = await getPageBySlug(`/`);
 		const res = await client.query(GET_PAGES, { slug: '/' }).toPromise();
-		console.log(res)
+
 		return {
 			props: {
 				page,
