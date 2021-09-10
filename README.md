@@ -51,3 +51,6 @@ This starter kit relies on the following content models.
 * Description, short text
 * CTA Text, short text
 * CTA Link, short text
+
+### Lighthouse score
+![Lighthouse score](./images/lighthouse.gif)
