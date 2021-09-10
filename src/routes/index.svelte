@@ -1,18 +1,14 @@
 <script context="module" lang="ts">
-	import type { Entry } from 'contentful';
-	import type { PageFields } from 'src/types';
-	import { getPageBySlug } from '../api/contentful';
-	import { client } from '../api/graphql';
-	import {GET_PAGES} from '../graphql/queries'
+	import type { PageFields } from '../types';
+	import { loadPage } from '../api/cms';
 
 	export const load = async () => {
-		const page = await getPageBySlug(`/`);
-		const res = await client.query(GET_PAGES, { slug: '/' }).toPromise();
+		const { components, data } = await loadPage('/')
 
 		return {
 			props: {
-				page,
-				graphQlPage: res.data.pageCollection.items[0]
+				components,
+				page: data
 			}
 		};
 	};
@@ -20,14 +16,10 @@
 
 <script lang="ts">
 	import { Map } from '../components/map';
-	export let page: Entry<PageFields>;
-	export let graphQlPage: Response;
+	export let page: PageFields;
+	export let components: { type: string; data: {[key: string]: unknown }}[];
 </script>
 
-{JSON.stringify(graphQlPage)}
-
-{#if page.fields.components}
-	{#each page.fields.components as component}
-		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} {page} />
-	{/each}
-{/if}
+{#each components as component}
+	<svelte:component this={Map[component.type]} {...component.data} {page} />
+{/each}

@@ -6,7 +6,7 @@
 	export let description: string;
 	export let ctaText: string;
 	export let ctaLink: string;
-	export let page: Entry<PageFields>;
+	export let page: PageFields;
 </script>
 
 <div class="relative w-full h-full pb-10">
@@ -20,7 +20,7 @@
 					{description}
 				</h2>
 				<h3>
-					Page: {page.fields.title}
+					Page: {page.title}
 				</h3>
 			</div>
 			<a href={ctaLink} target="_blank"
