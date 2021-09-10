@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Hoverable from '../Hoverable/Hoverable.svelte';
+	import Logo from '$static/logo.svg'
 	let isMenuOpen: boolean;
 </script>
 
@@ -13,8 +14,10 @@
 					<span class="sr-only">Workflow</span>
 					<img
 						class="h-8 w-auto sm:h-10"
-						src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-						alt=""
+						src={Logo}
+						alt="Logo"
+						width="43.75"
+						height="40"
 					/>
 				</a>
 			</div>

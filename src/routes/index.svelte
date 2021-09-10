@@ -1,12 +1,14 @@
 <script context="module" lang="ts">
-	import type { Entry } from 'contentful';
-	import type { PageFields } from 'src/types';
-	import { getPageBySlug } from '../api/contentful';
+	import type { PageFields } from '../types';
+	import { loadPage } from '../api/cms';
+
 	export const load = async () => {
-		const page = await getPageBySlug(`/`);
+		const { components, data } = await loadPage('/')
+
 		return {
 			props: {
-				page
+				components,
+				page: data
 			}
 		};
 	};
@@ -14,11 +16,10 @@
 
 <script lang="ts">
 	import { Map } from '../components/map';
-	export let page: Entry<PageFields>;
+	export let page: PageFields;
+	export let components: { type: string; data: {[key: string]: unknown }}[];
 </script>
 
-{#if page.fields.components}
-	{#each page.fields.components as component}
-		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} {page} />
-	{/each}
-{/if}
+{#each components as component}
+	<svelte:component this={Map[component.type]} {...component.data} {page} />
+{/each}

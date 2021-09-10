@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
+	import HeroImage from '$static/desktop.png?width=400;700;900&format=webp&meta&srcset'
 
 	export let title: string;
 	export let description: string;
 	export let ctaText: string;
 	export let ctaLink: string;
-	export let page: Entry<PageFields>;
+	export let page: PageFields;
 </script>
 
 <div class="relative w-full h-full pb-10">
@@ -20,7 +20,7 @@
 					{description}
 				</h2>
 				<h3>
-					Page: {page.fields.title}
+					Page: {page.title}
 				</h3>
 			</div>
 			<a href={ctaLink} target="_blank"
@@ -32,9 +32,12 @@
 		</div>
 		<img
 			class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0"
-			src="https://i.ibb.co/9GMTkW3/desktop.png"
+			srcset={HeroImage}
+			type="image/webp"
 			alt="sample page"
 			role="img"
+			width="1558"
+			height="1166"
 		/>
 	</div>
 </div>
