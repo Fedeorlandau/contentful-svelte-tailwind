@@ -35,6 +35,8 @@
 			src="/desktop.webp"
 			alt="sample page"
 			role="img"
+			width="1558"
+			height="1166"
 		/>
 	</div>
 </div>

@@ -15,6 +15,8 @@
 						class="h-8 w-auto sm:h-10"
 						src="/logo.svg"
 						alt="Logo"
+						width="43.75"
+						height="40"
 					/>
 				</a>
 			</div>
