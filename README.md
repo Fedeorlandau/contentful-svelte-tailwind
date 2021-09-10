@@ -1,6 +1,6 @@
 # Contentful + SvelteKit + Tailwind CSS + GraphQL
 
-Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) along with [GraphQL](https://www.contentful.com/developers/docs/references/graphql/), deployed to [Vercel](https://vercel.com).
+Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) along with [GraphQL](https://www.contentful.com/developers/docs/references/graphql/), deployed to [Vercel](https://vercel.com). If you don't want to use GraphQL please refer to the [nographql](https://github.com/Fedeorlandau/contentful-svelte-tailwind/tree/nographql) branch which uses Contentful's SDK.
 
 ![web](images/web.png)
 
