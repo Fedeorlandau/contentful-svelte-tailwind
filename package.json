@@ -36,6 +36,7 @@
 		"cookie": "^0.4.1",
 		"graphql": "^15.5.3",
 		"prettier": "^2.3.2",
-		"prettier-plugin-svelte": "^2.3.1"
+		"prettier-plugin-svelte": "^2.3.1",
+		"vite-imagetools": "^3.6.8"
 	}
 }

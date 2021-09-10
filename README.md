@@ -2,7 +2,7 @@
 
 Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/), deployed to [Vercel](https://vercel.com).
 
-![web](static/web.png)
+![web](images/web.png)
 
 _Live Example: https://contentful-svelte-tailwind.vercel.app/_
 
@@ -40,13 +40,13 @@ npm run build
 This starter kit relies on the following content models.
 
 ### Page
-![Page content model](./static/page.png)
+![Page content model](./images/page.png)
 * Title, short text.
 * Slug, short text
 * Components, References - many.
 
 ### Hero
-![Hero content model](./static/hero.png)
+![Hero content model](./images/hero.png)
 * Title, short text.
 * Description, short text
 * CTA Text, short text

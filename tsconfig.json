@@ -24,6 +24,8 @@
 		"allowJs": true,
 		"checkJs": true,
 		"paths": {
+			"$static": ["src/static"],
+			"$static/*": ["src/static/*"],
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"]
 		}
