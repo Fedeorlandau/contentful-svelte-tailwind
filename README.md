@@ -1,6 +1,6 @@
-# Contentful + SvelteKit + Tailwind CSS
+# Contentful + SvelteKit + Tailwind CSS + GraphQL
 
-Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/), deployed to [Vercel](https://vercel.com).
+Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) along with [GraphQL](https://www.contentful.com/developers/docs/references/graphql/), deployed to [Vercel](https://vercel.com).
 
 ![web](images/web.png)
 
@@ -52,5 +52,5 @@ This starter kit relies on the following content models.
 * CTA Text, short text
 * CTA Link, short text
 
-### Lighthouse score
+## Lighthouse score
 ![Lighthouse score](./images/lighthouse.gif)
