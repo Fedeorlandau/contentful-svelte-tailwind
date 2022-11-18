@@ -23,7 +23,7 @@
 					Page: {page.title}
 				</h3>
 			</div>
-			<a href={ctaLink} target="_blank"
+			<a href={ctaLink} target="_blank" rel="noreferrer"
 				><button
 					class="hover:opacity-90 text-xl w-full xl:text-3xl xl:w-11/12 mt-4 xl:mt-11 f-f-r py-6 bg-indigo-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700"
 					>{ctaText}</button
@@ -35,7 +35,6 @@
 			srcset={HeroImage}
 			type="image/webp"
 			alt="sample page"
-			role="img"
 			width="1558"
 			height="1166"
 		/>
