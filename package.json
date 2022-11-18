@@ -3,7 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build --verbose",
+		"build": "vite build",
 		"preview": "vite preview",
 		"postcss:watch": "TAILWIND_MODE=watch postcss tailwind.css -o build.css",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
