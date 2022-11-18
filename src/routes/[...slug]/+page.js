@@ -1,5 +1,4 @@
 import { loadPage } from '../../api/cms';
-export const csr = false;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({params}) {
